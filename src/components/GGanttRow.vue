@@ -107,7 +107,6 @@ const isBlank = (str: string) => {
   border-bottom-right-radius: 6px;
   background: #f2f2f2;
   z-index: 3;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
 }
 
 .bar-transition-leave-active,
