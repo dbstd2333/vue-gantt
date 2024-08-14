@@ -28,10 +28,10 @@ import provideConfig from "../provider/provideConfig.js"
 
 const TOOLTIP_FORMATS = {
   hour: "HH:mm",
-  day: "DD. MMM HH:mm",
-  date: "DD. MMMM YYYY",
-  month: "DD. MMMM YYYY",
-  week: "DD. MMMM YYYY (WW)"
+  day: "MMMDD HH:mm",
+  date: "YYYY MMMM DD",
+  month: "YYYY MMMM DD",
+  week: "YYYY MMMM DD (WW)"
 } as const
 
 const DEFAULT_DOT_COLOR = "cadetblue"
@@ -89,16 +89,19 @@ const tooltipContent = computed(() => {
 <style>
 .g-gantt-tooltip {
   position: fixed;
-  background: black;
-  color: white;
+  background: white;
+  color: #1d215e;
   z-index: 4;
-  font-size: 0.85em;
+  font-size: 1rem;
+  line-height: 1.5rem;
   padding: 5px;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: opacity 0.2s;
   display: flex;
   align-items: center;
   font-variant-numeric: tabular-nums;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  max-width: 800px;
 }
 
 .g-gantt-tooltip:before {
@@ -109,7 +112,7 @@ const tooltipContent = computed(() => {
   width: 0;
   height: 0;
   border: 10px solid transparent;
-  border-bottom-color: black;
+  border-bottom-color: white;
   border-top: 0;
   margin-left: -5px;
   margin-top: -5px;
