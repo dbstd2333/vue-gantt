@@ -6,7 +6,7 @@
         :key="label"
         class="g-upper-timeunit"
         :style="{
-          background: index % 2 === 0 ? colors.primary : colors.secondary,
+          background: index % 2 === 0 ? colors.secondary : colors.secondary,
           color: colors.text,
           width
         }"

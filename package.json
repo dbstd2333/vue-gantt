@@ -5,12 +5,12 @@
   "author": "Marko Zunic (@zunnzunn)",
   "scripts": {
     "serve": "vite",
-    "build": "npm run build:types && npm run build:lib",
+    "build": "pnpm run build:types && pnpm run build:lib",
     "build:lib": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir lib_types",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "pnpm run lint --fix",
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs"
@@ -71,6 +71,7 @@
     "url": "https://github.com/zunnzunn/vue-ganttastic"
   },
   "dependencies": {
-    "@vueuse/core": "^9.1.1"
+    "@vueuse/core": "^9.1.1",
+    "csstype": "^3.1.3"
   }
 }

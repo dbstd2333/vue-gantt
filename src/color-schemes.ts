@@ -16,13 +16,13 @@ export type ColorScheme = {
 
 export const colorSchemes: Record<string, ColorScheme> = {
   default: {
-    primary: "#eeeeee",
-    secondary: "#E0E0E0",
-    ternary: "#F5F5F5",
-    quartenary: "#ededed",
-    hoverHighlight: "rgba(204, 216, 219, 0.5)",
-    markerCurrentTime: "#000",
-    text: "#404040",
+    primary: "#165DFF",
+    secondary: "#F2F3F5",
+    ternary: "#6AA1FF",
+    quartenary: "#94BFFF",
+    hoverHighlight: "rgba(64, 128, 255, 0.5)",
+    markerCurrentTime: "#86909C",
+    text: "#1D2129",
     background: "white"
   },
 

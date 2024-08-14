@@ -37,10 +37,10 @@ export default function useTimeaxisUnits() {
 
   const displayFormats = {
     hour: "HH",
-    date: "DD.MMM",
-    day: "DD.MMM",
+    date: "MMMDD",
+    day: "MMMDD",
     week: "WW",
-    month: "MMMM YYYY",
+    month: "YYYY MMMM",
     year: "YYYY"
   }
 
@@ -80,7 +80,7 @@ export default function useTimeaxisUnits() {
         : (endCurrentUpperUnit.diff(currentUpperUnit, "minutes", true) / totalMinutes) * 100
 
       upperUnits.push({
-        label: currentUpperUnit.format(displayFormats[upperUnit]),
+        label: currentUpperUnit.format(displayFormats[upperUnit]) + "日",
         value: String(currentUpperUnit),
         date: currentUpperUnit.toDate(),
         width: String(upperWidth) + "%"
